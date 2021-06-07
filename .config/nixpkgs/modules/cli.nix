@@ -38,4 +38,14 @@
     enable = true;
     enableFishIntegration = true;
   };
+
+  programs.git = {
+    enable = true;
+    ignores = [];
+    userEmail = "public@theocodes.com";
+    userName = "Theo Felippe";
+    extraConfig = {
+
+    };
+  };
 }
