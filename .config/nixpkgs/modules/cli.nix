@@ -48,7 +48,9 @@
     # ignores = [ "shell.nix" ".envrc" ];
     userEmail = "public@theocodes.com";
     userName = "Theo Felippe";
-    extraConfig = {};
+    extraConfig = {
+      core = { excludesfile = "~/.gitignore_global"; };
+    };
   };
 
   # programs.ssh = {
