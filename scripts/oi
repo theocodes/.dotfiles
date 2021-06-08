@@ -3,12 +3,12 @@
 set -e
 
 sync () {
-    echo
-    echo "==== Pushing changes ===="
+    echo "\n==== Pushing changes ===="
     git add .
     git commit -m "$(date)"
     git push -u origin master
     echo "==== done ===="
+    echo
 }
 
 if [[ "$1" = "sync" ]]; then
