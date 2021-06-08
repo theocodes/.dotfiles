@@ -1,0 +1,15 @@
+#!/bin/sh
+
+sync () {
+    git add .
+    git commit -m "$(date)"
+}
+
+if [[ "$1" = "sync" ]]; then
+    sync
+else
+    pushd ~/dotfiles
+    make $1
+    sync
+    popd
+fi

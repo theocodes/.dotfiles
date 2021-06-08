@@ -32,6 +32,10 @@
     functions = {
       signin = "eval (op signin felippe.1password.com)";
     };
+
+    promptInit = ''
+      z --add "$PWD"
+    '';
   };
 
   programs.starship = {
@@ -41,11 +45,13 @@
 
   programs.git = {
     enable = true;
-    ignores = [];
+    # ignores = [ "shell.nix" ".envrc" ];
     userEmail = "public@theocodes.com";
     userName = "Theo Felippe";
-    extraConfig = {
-
-    };
+    extraConfig = {};
   };
+
+  # programs.ssh = {
+  #   enable = true;
+  # };
 }
