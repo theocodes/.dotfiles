@@ -3,7 +3,8 @@
 set -e
 
 sync () {
-    echo "\n==== Pushing changes ===="
+    echo
+    echo -e "\n==== Pushing changes ===="
     git add .
     git commit -m "$(date)"
     git push -u origin master
