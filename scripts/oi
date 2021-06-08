@@ -5,6 +5,7 @@ set -e
 sync () {
     git add .
     git commit -m "$(date)"
+    git push -u origin master
 }
 
 if [[ "$1" = "sync" ]]; then
