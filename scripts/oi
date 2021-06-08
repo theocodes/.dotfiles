@@ -7,7 +7,7 @@ sync () {
     git add .
     git commit -m "$(date)"
     git push -u origin master
-    echo -e "\n==== done ====\n"
+    echo
 }
 
 if [[ "$1" = "sync" ]]; then
