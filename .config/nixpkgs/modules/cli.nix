@@ -49,7 +49,13 @@
     userEmail = "public@theocodes.com";
     userName = "Theo Felippe";
     extraConfig = {
-      core = { excludesfile = "~/.gitignore_global"; };
+      core = {
+        excludesfile = "~/.gitignore_global";
+      };
+
+      url = {
+        "git@github.com" = { insteadOf = "https://github.com/"; };
+      };
     };
   };
 
