@@ -5,6 +5,9 @@
     # tools
     awscli github-cli kubectl
     exercism _1password
+
+    # golang
+    go go-tools
   ];
 
   # nix-shell replacement
