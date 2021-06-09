@@ -7,7 +7,7 @@
     exercism _1password
 
     # golang
-    go go-tools
+    go go-tools gopls
   ];
 
   # nix-shell replacement
