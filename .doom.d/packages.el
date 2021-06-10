@@ -50,3 +50,4 @@
 ;(unpin! t)
 (package! fish-mode)
 (package! feature-mode)
+(package! terraform-mode)

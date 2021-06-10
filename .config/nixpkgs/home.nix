@@ -14,6 +14,7 @@
     stow
     gnumake
     ripgrep
+    p7zip
 
     # fonts
     jetbrains-mono
