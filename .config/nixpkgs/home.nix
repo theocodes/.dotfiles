@@ -15,6 +15,7 @@
     gnumake
     ripgrep
     p7zip
+    dig
 
     # fonts
     jetbrains-mono
