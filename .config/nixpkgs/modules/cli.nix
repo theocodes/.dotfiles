@@ -60,10 +60,10 @@
     };
   };
 
-  services.gpg-agent = {
-    enable = true;
-    pinentryFlavor = "gtk2";
-  };
+  # services.gpg-agent = {
+  #   enable = true;
+  #   pinentryFlavor = "gtk2";
+  # };
 
   # programs.ssh = {
   #   enable = true;
