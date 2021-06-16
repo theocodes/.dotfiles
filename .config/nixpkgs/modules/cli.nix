@@ -45,6 +45,7 @@
 
   programs.git = {
     enable = true;
+    # TODO "ignores" seems to be causing the build to fail O_o
     # ignores = [ "shell.nix" ".envrc" ];
     userEmail = "public@theocodes.com";
     userName = "Theo Felippe";
@@ -57,6 +58,11 @@
         "git@github.com:" = { insteadOf = "https://github.com/"; };
       };
     };
+  };
+
+  services.gpg-agent = {
+    enable = true;
+    pinentryFlavor = "gtk2";
   };
 
   # programs.ssh = {
