@@ -71,6 +71,16 @@
             ./modules/editors.nix
           ];
         };
+
+        hades = lib.nixosSystem {
+          inherit system;
+
+          modules = [ overlays ] ++ [
+	    ./modules/wsl.nix
+            ./modules/cli.nix
+	    ./modules/dev.nix
+          ];
+        };
       };
     };
 }
