@@ -4,11 +4,8 @@ with lib;
 let
   defaultUser = "tfelippe";
   syschdemd = import ./syschdemd.nix { inherit lib pkgs config defaultUser; };
-in
-{
-  imports = [
-    "${modulesPath}/profiles/minimal.nix"
-  ];
+in {
+  imports = [ "${modulesPath}/profiles/minimal.nix" ];
 
   # WSL is closer to a container than anything else
   boot.isContainer = true;
@@ -19,13 +16,15 @@ in
   networking.dhcpcd.enable = false;
 
   nixpkgs.config.allowUnfree = true;
+  services.localtime.enable = true;
 
   environment.systemPackages = with pkgs; [
-    vim 
-    neovim 
-    git 
+    vim
+    neovim
+    git
     gnumake
     stow
+    ripgrep
   ];
 
   users.users.tfelippe = {
@@ -33,7 +32,7 @@ in
     hashedPassword =
       "$6$nCMdQaHrRiC0W$KTsvDnO7.bu6MBKR9Nl4wabZkH5AdwFBLCrmY7Cmn88g3gpO7X9qEDFPLJQlbU.qPTHiTt196/IeZdtJdSlMz0";
     extraGroups = [ "wheel" "networkmanager" ];
-    #shell = pkgs.fish;
+    shell = pkgs.fish;
   };
 
   #users.users.${defaultUser} = {
@@ -41,9 +40,7 @@ in
   #  extraGroups = [ "wheel" ];
   #};
 
-  networking = {
-    hostName = "hades";
-  };
+  networking = { hostName = "hades"; };
 
   environment.noXlibs = lib.mkForce false;
 
@@ -70,6 +67,9 @@ in
   systemd.services.firewall.enable = false;
   systemd.services.systemd-resolved.enable = false;
   systemd.services.systemd-udevd.enable = false;
+
+  # TODO move this
+  fonts.fonts = with pkgs; [ jetbrains-mono cascadia-code font-awesome ];
 
   # Don't allow emergency mode, because we don't have a console.
   systemd.enableEmergencyMode = false;

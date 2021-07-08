@@ -1,5 +1,6 @@
 # no greeting
-function fish_greeting; end
+function fish_greeting
+end
 
 # prompt
 starship init fish | source
@@ -11,8 +12,9 @@ direnv hook fish | source
 set EDITOR "emacsclient -t"
 set ALTERNATE_EDITOR ""
 set EDITOR "emacsclient -c"
-set GOSUMDB "off"
+set GOSUMDB off
 set GOPATH $HOME/go
+set -gx DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
 # global
 set -gx FABPATH $HOME/repos/github.com/zencoder
@@ -31,4 +33,3 @@ alias ll="exa -la"
 abbr tree exa -la -T
 abbr rel 'exec $SHELL -l'
 abbr vim nvim
-

@@ -20,10 +20,7 @@
       };
 
       overlays = ({ pkgs, ... }: {
-        nixpkgs.overlays = with inputs;
-          [
-            neovim-nightly-overlay.overlay
-          ];
+        nixpkgs.overlays = with inputs; [ neovim-nightly-overlay.overlay ];
       });
 
       lib = nixpkgs.lib;
@@ -32,11 +29,11 @@
 
       darwinConfigurations = {
         rapture = dlib.darwinSystem {
-          modules = [ overlays ] ++ [ 
+          modules = [ overlays ] ++ [
             ./modules/darwin.nix
             ./modules/cli.nix
             ./modules/editors.nix
-	          ./modules/dev.nix
+            ./modules/dev.nix
           ];
         };
       };
@@ -76,9 +73,10 @@
           inherit system;
 
           modules = [ overlays ] ++ [
-	    ./modules/wsl.nix
+            ./modules/wsl.nix
             ./modules/cli.nix
-	    ./modules/dev.nix
+            ./modules/dev.nix
+            ./modules/editors.nix
           ];
         };
       };

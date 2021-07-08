@@ -33,5 +33,8 @@
 
     # sh
     shfmt
+
+    # web debugging proxy
+    charles
   ];
 }
