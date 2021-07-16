@@ -131,6 +131,7 @@ exec --no-startup-id mn-applet
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id picom
+exec --no-startup-id flameshot
 
 # STYLE
 
