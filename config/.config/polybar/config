@@ -3,7 +3,7 @@ alert=#bd2c40
 primary=#6272a4
 foreground=#ffffff
 foreground-alt=#44475a
-background=#282a36
+background=#222222
 
 [bar/main]
 cursor-click=pointer

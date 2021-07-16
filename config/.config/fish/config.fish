@@ -14,7 +14,7 @@ set ALTERNATE_EDITOR ""
 set EDITOR "emacsclient -c"
 set GOSUMDB off
 set GOPATH $HOME/go
-set -gx DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+# set -gx DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
 # global
 set -gx FABPATH $HOME/repos/github.com/zencoder
